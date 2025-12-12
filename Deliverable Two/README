@@ -1,0 +1,100 @@
+ConnectX Deep Reinforcement Learning Agent
+
+
+Purpose
+This project implements a Deep Reinforcement Learning (DRL) bot for the Kaggle ConnectX competition. The agent is designed to learn how to play ConnectX by playing against itself, using a reward system to improve its performance over time. The bot uses a Deep Q-Learning algorithm to make decisions without relying on predefined heuristics.
+
+
+Key Objectives:
+1. Develop a reinforcement learning agent that uses a neural network to evaluate the board and predict the best move.
+2. Train the bot using self-play, allowing it to improve iteratively without relying on predefined heuristics.
+3. Implement a reward system that encourages the bot to win, avoid losing, and make valid moves.
+
+
+Agents Implemented
+In this second phase of the project, we have shifted from heuristic-based strategies to a Deep Q-Learning (DQN) approach:
+Deep Reinforcement Learning Agent:
+  - Uses a neural network to predict Q-values for each possible move.
+    - Trained using the Deep Q-Learning algorithm.
+    - The bot is rewarded based on the following conditions:
+        - Winning move: +1
+        - Invalid move: -10
+        - Letting the opponent win on the next move: -1
+        - Valid moves that do not immediately win: 1/42 bonus per valid move.
+
+
+Files Included:
+  - Deep_Reinforcement_Learning.py: The main Python file containing the implementation of the DRL agent.
+  - submission.py: The file that will be generated for submission to the Kaggle competition after training.
+  - requirements.txt: A list of dependencies required to run the project.
+
+
+Setup Instructions
+Step 1: Ensure that the following dependencies are installed before running the project:
+    1. Python: Make sure Python is installed. You can download it from here: https://www.python.org/downloads/.
+    2. Kaggle Environments: Install this dependency to simulate the ConnectX environment.
+        Run the following command:
+            pip install kaggle-environments
+
+Step 2: Download the Project
+    Clone or download this repository to your local machine.
+
+Step 3: Install Dependencies - requirements.txt
+    Locate the requirements.txt file in the directory for this project. Go to the terminal and make sure you are in that same directory.
+    Next, run the command "pip install -r requirements.txt" to install all package dependencies. After doing so, you should now be able to work with the files included.
+
+Step 4: Run the Agents
+    To train the DRL agent, run the following command:
+        Type "python Deep_Reinforcement_Learning.py" into the terminal to run it OR
+        Run the file by pressing the 'Run Code' button, usually located in the upper right-hand corner of your IDE, if it is supported.
+
+
+Generating the Submission File:
+  - After training, the script will generate a submission.py file that can be uploaded to the Kaggle competition. This file contains the fully self-contained agent, including all necessary imports and helper functions.
+
+
+How to Submit to Kaggle
+Once the training is complete and submission.py is generated:
+1. Go to the Kaggle ConnectX competition page. (https://www.kaggle.com/competitions/connectx#)
+2. Upload the submission.py file as your entry.
+3. The platform will evaluate your bot against other submissions.
+
+
+Generating and Running HTML to Visualize the Game Locally
+To visualize the game in your browser, you can generate HTML code using the environment render method. Here’s how:
+    1. Uncomment the following code in any of the agent files (Default_Given.py, One_Step_Lookahead.py, etc.), which is located 13-14 lines above the bottom:
+        htmloutput = env.render(mode="html")
+        print(htmloutput)
+    2. Run the file. The HTML code will be output to the terminal.
+    3. Copy the HTML code:
+        Select the terminal window and press CTRL-A to select all the text, then copy it.
+    4. Paste the HTML code into a new HTML file (PyCharm and VSCode both support HTML documents).
+    5. Clean the HTML file:
+        Delete all lines above the line starting with <!DOCTYPE html> (this line must remain, as it is the start of the HTML document).
+        Delete a few lines at the bottom, ensuring that the last line in the file is </html>.
+    6. Run the HTML file:
+        In PyCharm, hover your mouse over the top-right corner of the file, and you should see an option to launch the document in your browser.
+        In VSCode, go to the "Run" button in the top-left corner and select "Run Without Debugging."
+This should launch the game in your default browser, allowing you to visualize the gameplay.
+
+
+Acknowledgments
+This project was developed using resources from the Kaggle ConnectX competition. The reinforcement learning tutorials by Alexis Cook and contributions from the Kaggle community were instrumental in guiding the development of the DRL agent.
+For more details about Kaggle ConnectX, visit their page here: https://www.kaggle.com/competitions/connectx.
+
+
+License
+This project incorporates code provided by Kaggle.
+  Copyright 2020 Kaggle Inc
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+
+This README file and programs associated were produced with help and guidance from ChatGPT.
