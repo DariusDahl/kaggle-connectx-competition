@@ -2,6 +2,8 @@
 
 This repository contains the work of our team for the **Kaggle ConnectX** competition, which is based on creating AI agents to play Connect Four in a reliable and strategic manner. Our best submission achieved a **skill rating of 714.5**, which, compared against a current snapshot of the public leaderboard (12/12/2025), would be roughly **top 10%** (tied for about 22nd out of 224 entries at the time of review).
 
+🔗 **[Official Kaggle ConnectX Competition](https://www.kaggle.com/c/connectx)**
+
 ## What is ConnectX?
 
 ConnectX is Kaggle's variation of the classic Connect Four game. Each player takes turns placing markers on a grid, aiming to align a specific number of markers horizontally, vertically, or diagonally before the opponent. The ConnectX variation introduces a few twists, such as different grid sizes or numbers of markers required to win, which makes the competition challenging and diverse.
@@ -44,3 +46,4 @@ This repository is structured to reflect the three major deliverables we worked 
 - **Extensions**: Test the bot’s robustness on slightly altered rule sets (e.g., varying grid sizes or custom win conditions).
 
 Feel free to explore the individual deliverables for technical details, code, and experimental results!
+
